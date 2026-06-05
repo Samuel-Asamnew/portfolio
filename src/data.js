@@ -1,0 +1,123 @@
+export const data = {
+  name: "Samuel Asamnew",
+  title: "Software Engineer",
+  roles: ["Backend Developer", "Full Stack Developer", "Banking Systems Engineer"],
+  email: "samuelasamnewmamo@gmail.com",
+  phone: "+251 949 384 998",
+  location: "Addis Ababa, Ethiopia",
+  github: "https://github.com/samuelasamnew", // update with your real handle
+  linkedin: "https://linkedin.com/in/samuelasamnew", // update with your real profile
+  summary: "Software Engineer and IT professional with hands-on experience in enterprise software development, banking integrations, backend systems, and full-stack application development. Proven track record in Java Spring Boot, React, REST API development, and system integration.",
+
+  skills: [
+    { name: "Java / Spring Boot", level: 95, category: "Backend" },
+    { name: "React", level: 85, category: "Frontend" },
+    { name: "Python", level: 78, category: "Backend" },
+    { name: "REST API Design", level: 92, category: "Backend" },
+    { name: "Laravel", level: 70, category: "Backend" },
+    { name: "ESB / Integration", level: 88, category: "Integration" },
+    { name: "MySQL", level: 85, category: "Database" },
+    { name: "Oracle DB", level: 80, category: "Database" },
+    { name: "Git", level: 88, category: "DevOps" },
+    { name: "ERPNext / Python", level: 75, category: "ERP" },
+  ],
+
+  experience: [
+    {
+      role: "Junior IT Officer",
+      company: "Gadaa Bank S.C.",
+      period: "April 2024 – Present",
+      type: "Full-time",
+      highlights: [
+        "Developed ISO 20022 Message Conversion System for cross-border banking",
+        "Built School Payment System integrated with core banking platforms",
+        "Designed and delivered IFRS9 System using Java Spring Boot & React",
+        "Built Signature Application System for banking operations",
+        "Led Derash payment integration and other banking system integrations",
+        "Designed RESTful APIs and backend services supporting critical banking applications",
+      ],
+      tech: ["Java", "Spring Boot", "React", "REST API", "ISO 20022"],
+    },
+    {
+      role: "Backend Developer",
+      company: "MSS Software PLC",
+      period: "Prior Experience",
+      type: "Full-time",
+      highlights: [
+        "Delivered government system integrations for Ministry of Revenue projects",
+        "Designed and developed backend services and integration solutions",
+        "Participated in enterprise system implementation and API integrations",
+      ],
+      tech: ["Java", "REST API", "ESB", "Integration"],
+    },
+    {
+      role: "ERPNext Developer",
+      company: "Mevani PLC",
+      period: "Prior Experience",
+      type: "Full-time",
+      highlights: [
+        "Customised and extended ERPNext modules to meet client business requirements",
+        "Developed Python-based backend scripts and automation workflows",
+      ],
+      tech: ["Python", "ERPNext", "Frappe", "MySQL"],
+    },
+  ],
+
+  projects: [
+    {
+      title: "ISO 20022 Message Conversion System",
+      desc: "Cross-border banking message conversion system compliant with ISO 20022 international standard for financial data exchange.",
+      tech: ["Java", "Spring Boot", "REST API"],
+      highlight: true,
+    },
+    {
+      title: "IFRS9 Banking System",
+      desc: "Financial system for IFRS9 compliance — Expected Credit Loss provisioning and reporting for banking portfolios.",
+      tech: ["Java", "Spring Boot", "React", "Oracle DB"],
+      highlight: true,
+    },
+    {
+      title: "School Payment System",
+      desc: "End-to-end school fee payment system integrated with Gadaa Bank's core banking platform for seamless transactions.",
+      tech: ["Java", "Spring Boot", "React", "MySQL"],
+      highlight: false,
+    },
+    {
+      title: "Derash Payment Integration",
+      desc: "Payment gateway integration enabling Derash digital wallet transactions within the bank's ecosystem.",
+      tech: ["Java", "REST API", "ESB"],
+      highlight: false,
+    },
+    {
+      title: "Signature Application System",
+      desc: "Digital signature management system for banking document workflows and authorization processes.",
+      tech: ["Java", "Spring Boot", "React"],
+      highlight: false,
+    },
+    {
+      title: "Ministry of Revenue Integration",
+      desc: "Government system integration for Ministry of Revenue — data exchange pipelines and backend API services.",
+      tech: ["Java", "ESB", "REST API"],
+      highlight: false,
+    },
+  ],
+
+  education: {
+    degree: "BSc in Information Technology",
+    school: "University of Gondar",
+    gpa: "3.82 / 4.00",
+  },
+
+  certifications: [
+    { name: "Job Readiness", issuer: "Dereja Academy" },
+    { name: "Fundamentals of Programming", issuer: "Udacity" },
+    { name: "Data Analysis Fundamentals", issuer: "Udacity" },
+    { name: "AI Fundamentals", issuer: "Udacity" },
+  ],
+
+  languages: [
+    { lang: "Amharic", level: "Fluent" },
+    { lang: "English", level: "Fluent" },
+    { lang: "Afan Oromo", level: "Intermediate" },
+  ],
+};
