@@ -6,8 +6,9 @@ export default function Experience() {
   const exp = data.experience[active];
 
   return (
-    <section id="experience" style={{ padding: '6rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
-      <SectionLabel>02 // Experience</SectionLabel>
+    <section id="experience" className="section section--alt">
+      <div className="container" style={{ maxWidth: '900px' }}>
+        <SectionLabel>02 // Experience</SectionLabel>
 
       <h2 style={{
         fontFamily: 'var(--font-display)', fontWeight: 800,
@@ -18,7 +19,7 @@ export default function Experience() {
         Where I've<br /><span style={{ color: 'var(--accent)' }}>Worked</span>
       </h2>
 
-      <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap' }}>
+      <div className="experience-grid">
         {/* Tab list */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0', minWidth: '180px' }}>
           {data.experience.map((e, i) => (
@@ -69,6 +70,7 @@ export default function Experience() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

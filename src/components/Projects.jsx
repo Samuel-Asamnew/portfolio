@@ -3,12 +3,11 @@ import { data } from '../data';
 
 export default function Projects() {
   return (
-    <section id="projects" style={{
-      padding: '6rem 2rem',
+    <section id="projects" className="section" style={{
       background: 'var(--surface)',
       position: 'relative',
     }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <div className="container" style={{ maxWidth: '900px' }}>
         <div style={{
           color: 'var(--accent)', fontFamily: 'var(--font-mono)',
           fontSize: '0.72rem', letterSpacing: '0.15em', marginBottom: '1rem', opacity: 0.7,
@@ -22,9 +21,7 @@ export default function Projects() {
           Things I've<br /><span style={{ color: 'var(--accent)' }}>Built</span>
         </h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+        <div className="project-grid" style={{
           gap: '1.5rem',
         }}>
           {data.projects.map((p, i) => (
@@ -89,7 +86,7 @@ function ProjectCard({ project, featured }) {
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: 'auto' }}>
         {project.tech.map(t => (
           <span key={t} style={{
-            color: '#666', fontSize: '0.7rem',
+            color: 'var(--muted)', fontSize: '0.75rem',
             fontFamily: 'var(--font-mono)', letterSpacing: '0.04em',
           }}>
             {t}

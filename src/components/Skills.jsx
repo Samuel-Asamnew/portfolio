@@ -5,13 +5,14 @@ const categories = [...new Set(data.skills.map(s => s.category))];
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ padding: '6rem 2rem', maxWidth: '900px', margin: '0 auto' }}>
-      <div style={{
-        color: 'var(--accent)', fontFamily: 'var(--font-mono)',
-        fontSize: '0.72rem', letterSpacing: '0.15em', marginBottom: '1rem', opacity: 0.7,
-      }}>04 // Skills</div>
+    <section id="skills" className="section" style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <div className="container" style={{ maxWidth: '900px' }}>
+        <div style={{
+          color: 'var(--accent)', fontFamily: 'var(--font-mono)',
+          fontSize: '0.72rem', letterSpacing: '0.15em', marginBottom: '1rem', opacity: 0.7,
+        }}>04 // Skills</div>
 
-      <h2 style={{
+        <h2 style={{
         fontFamily: 'var(--font-display)', fontWeight: 800,
         fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.03em',
         marginBottom: '3rem', lineHeight: 1.1,
@@ -71,6 +72,7 @@ export default function Skills() {
           ))}
         </div>
       </div>
+    </div>
     </section>
   );
 }

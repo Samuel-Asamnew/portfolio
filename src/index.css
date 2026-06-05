@@ -5,29 +5,131 @@
 }
 
 :root {
-  --bg: #0a0a0a;
-  --surface: #111111;
-  --surface2: #1a1a1a;
-  --border: #222222;
-  --accent: #00e5a0;
-  --accent2: #0066ff;
-  --text: #f0f0f0;
-  --muted: #666666;
-  --font-display: 'Syne', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --bg: #050608;
+  --surface: #101214;
+  --surface2: #161a20;
+  --border: #262f3a;
+  --accent: #38bdf8;
+  --accent2: #7dd3fc;
+  --text: #f5f7fb;
+  --muted: #9ca3af;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-display);
+  color-scheme: dark;
 }
 
 body {
+  min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-mono);
-  font-size: 14px;
-  line-height: 1.7;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.75;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, a {
+  font: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+.section {
+  padding: 6rem 2rem;
+}
+
+.section--alt {
+  background: var(--surface);
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.section-label {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin-bottom: 3rem;
+}
+
+.strong-text {
+  color: var(--text);
+}
+
+.muted-text {
+  color: var(--muted);
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 0.88rem;
+}
+
+.badge-list span {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 999px;
+  padding: 0.55rem 0.95rem;
+  color: var(--text);
+  font-family: var(--font-mono);
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-grid,
+.experience-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.experience-grid {
+  grid-template-columns: minmax(220px, 240px) 1fr;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-group {
+    justify-content: center;
+  }
 }
 
 ::-webkit-scrollbar {

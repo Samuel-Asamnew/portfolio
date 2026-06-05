@@ -29,10 +29,9 @@ export default function Hero() {
   }, [displayed, typing, roleIdx]);
 
   return (
-    <section id="about" style={{
+    <section id="about" className="section" style={{
       minHeight: '100vh',
       display: 'flex', alignItems: 'center',
-      padding: '6rem 2rem 4rem',
       position: 'relative',
       overflow: 'hidden',
     }}>
@@ -84,16 +83,32 @@ export default function Hero() {
           <span style={{ color: 'var(--accent)' }}>{data.name.split(' ')[1]}</span>
         </h1>
 
+        <div style={{
+          fontFamily: 'var(--font-display)', fontWeight: 600,
+          fontSize: '1rem', color: 'var(--accent)',
+          letterSpacing: '0.12em', textTransform: 'uppercase',
+          marginBottom: '1rem',
+        }}>
+          {data.title} · Banking Systems · APIs
+        </div>
+
         {/* Typewriter */}
         <div style={{
           fontFamily: 'var(--font-mono)', fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
-          color: 'var(--muted)', marginBottom: '2rem',
+          color: 'var(--muted)', marginBottom: '1.75rem',
           animation: 'fadeUp 0.8s ease both 0.2s',
           minHeight: '2rem',
         }}>
           <span style={{ color: 'var(--accent)' }}>$ </span>
           {displayed}
           <span style={{ animation: 'blink 0.8s step-end infinite', color: 'var(--accent)' }}>▌</span>
+        </div>
+
+        {/* Quick facts */}
+        <div className="badge-list">
+          {['Enterprise banking', 'API-led integrations', 'Full-stack delivery'].map(fact => (
+            <span key={fact}>{fact}</span>
+          ))}
         </div>
 
         {/* Summary */}
@@ -106,38 +121,40 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div style={{
-          display: 'flex', gap: '1rem', flexWrap: 'wrap',
+        <div className="cta-group" style={{
           animation: 'fadeUp 0.8s ease both 0.4s',
         }}>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             style={{
               background: 'var(--accent)', color: 'var(--bg)',
-              border: 'none', borderRadius: '4px',
-              padding: '14px 28px', cursor: 'pointer',
-              fontFamily: 'var(--font-mono)', fontWeight: 500, fontSize: '0.85rem',
-              letterSpacing: '0.05em', transition: 'all 0.2s',
+              border: 'none', borderRadius: '8px',
+              padding: '16px 34px', cursor: 'pointer',
+              fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '0.95rem',
+              letterSpacing: '0.06em',
             }}
-            onMouseEnter={e => { e.target.style.background = '#00c488'; e.target.style.transform = 'translateY(-2px)'; }}
+            onMouseEnter={e => { e.target.style.background = '#22c5f2'; e.target.style.transform = 'translateY(-2px)'; }}
             onMouseLeave={e => { e.target.style.background = 'var(--accent)'; e.target.style.transform = 'translateY(0)'; }}
           >
             Get in Touch →
           </button>
-          <button
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+          <a
+            href={data.linkedin}
+            target="_blank"
+            rel="noreferrer"
             style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               background: 'transparent', color: 'var(--text)',
-              border: '1px solid var(--border)', borderRadius: '4px',
-              padding: '14px 28px', cursor: 'pointer',
-              fontFamily: 'var(--font-mono)', fontWeight: 400, fontSize: '0.85rem',
-              letterSpacing: '0.05em', transition: 'all 0.2s',
+              border: '1px solid var(--border)', borderRadius: '8px',
+              padding: '16px 34px', textDecoration: 'none',
+              fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '0.95rem',
+              letterSpacing: '0.06em',
             }}
-            onMouseEnter={e => { e.target.style.borderColor = 'var(--accent)'; e.target.style.color = 'var(--accent)'; }}
-            onMouseLeave={e => { e.target.style.borderColor = 'var(--border)'; e.target.style.color = 'var(--text)'; }}
+            onMouseEnter={e => { e.target.style.borderColor = 'var(--accent)'; e.target.style.color = 'var(--accent)'; e.target.style.transform = 'translateY(-2px)'; }}
+            onMouseLeave={e => { e.target.style.borderColor = 'var(--border)'; e.target.style.color = 'var(--text)'; e.target.style.transform = 'translateY(0)'; }}
           >
-            View Projects
-          </button>
+            View LinkedIn
+          </a>
         </div>
 
         {/* Stats */}

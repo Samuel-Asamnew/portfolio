@@ -41,6 +41,36 @@ export default function Contact() {
           Drop me a message — I respond quickly.
         </p>
 
+        <div style={{
+          display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap',
+          marginBottom: '2rem',
+        }}>
+          <a href={data.github} target="_blank" rel="noreferrer" style={{
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            background: 'rgba(56, 189, 248, 0.12)', color: 'var(--text)',
+            padding: '14px 28px', borderRadius: '8px', textDecoration: 'none',
+            fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '0.9rem',
+            letterSpacing: '0.05em', border: '1px solid rgba(56, 189, 248, 0.18)',
+          }}
+          onMouseEnter={e => { e.target.style.background = 'rgba(56, 189, 248, 0.18)'; e.target.style.transform = 'translateY(-2px)'; }}
+          onMouseLeave={e => { e.target.style.background = 'rgba(56, 189, 248, 0.12)'; e.target.style.transform = 'translateY(0)'; }}
+          >
+            GitHub
+          </a>
+          <a href={data.linkedin} target="_blank" rel="noreferrer" style={{
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            background: 'rgba(56, 189, 248, 0.12)', color: 'var(--text)',
+            padding: '14px 28px', borderRadius: '8px', textDecoration: 'none',
+            fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '0.9rem',
+            letterSpacing: '0.05em', border: '1px solid rgba(56, 189, 248, 0.18)',
+          }}
+          onMouseEnter={e => { e.target.style.background = 'rgba(56, 189, 248, 0.18)'; e.target.style.transform = 'translateY(-2px)'; }}
+          onMouseLeave={e => { e.target.style.background = 'rgba(56, 189, 248, 0.12)'; e.target.style.transform = 'translateY(0)'; }}
+          >
+            LinkedIn
+          </a>
+        </div>
+
         <a href={`mailto:${data.email}`} style={{
           display: 'inline-block',
           background: 'var(--accent)', color: 'var(--bg)',
