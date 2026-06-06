@@ -39,8 +39,7 @@ export default function Navbar() {
 
       {/* Desktop */}
       <ul style={{
-        display: 'flex', gap: '2rem', listStyle: 'none',
-        '@media(max-width:600px)': { display: 'none' }
+        display: 'flex', gap: '2rem', listStyle: 'none'
       }} className="nav-desktop">
         {links.map(l => (
           <li key={l}>

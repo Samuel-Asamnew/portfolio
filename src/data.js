@@ -5,8 +5,8 @@ export const data = {
   email: "samuelasamnewmamo@gmail.com",
   phone: "+251 949 384 998",
   location: "Addis Ababa, Ethiopia",
-  github: "https://github.com/samuelasamnew", // update with your real handle
-  linkedin: "https://linkedin.com/in/samuelasamnew", // update with your real profile
+  github: "https://github.com/Samuel-Asamnew", // update with your real handle
+  linkedin: "www.linkedin.com/in/samuel-asamnew-mamo-80245833b", // update with your real profile
   summary: "Software Engineer and IT professional with hands-on experience in enterprise software development, banking integrations, backend systems, and full-stack application development. Proven track record in Java Spring Boot, React, REST API development, and system integration.",
 
   skills: [
@@ -65,6 +65,13 @@ export const data = {
 
   projects: [
     {
+      title: "National ID Integration into Core Banking",
+      desc: "Worked as both frontend (React) and backend (Java, MySQL) developer on a project integrating national ID verification into a core banking system. Built user interfaces for customer onboarding, developed secure APIs for ID validation, and optimized database schemas to manage identity records. The solution streamlined customer registration, enhanced security, and ensured compliance with national regulations.",
+      tech: ["React", "Java", "MySQL", "REST API", "Integration"],
+      link: "https://fayda.gadaabank.com.et/publicfayda/",
+      highlight: true,
+    },
+    {
       title: "ISO 20022 Message Conversion System",
       desc: "Cross-border banking message conversion system compliant with ISO 20022 international standard for financial data exchange.",
       tech: ["Java", "Spring Boot", "REST API"],
@@ -109,15 +116,15 @@ export const data = {
   },
 
   certifications: [
-    { name: "Job Readiness", issuer: "Dereja Academy" },
-    { name: "Fundamentals of Programming", issuer: "Udacity" },
-    { name: "Data Analysis Fundamentals", issuer: "Udacity" },
-    { name: "AI Fundamentals", issuer: "Udacity" },
+    { name: "Job Readiness", issuer: "Dereja Academy", url: "" },
+    { name: "Fundamentals of Programming", issuer: "Udacity", url: "https://www.udacity.com/certificate/e/600059fc-d09b-11ef-8bb8-cb0c72f94dc7" },
+    { name: "Data Analysis Fundamentals", issuer: "Udacity", url: "https://www.udacity.com/certificate/e/c9d792aa-0a33-11f1-8af2-67b4cbf0dc19" },
+    { name: "AI Fundamentals", issuer: "Udacity", url: "https://www.udacity.com/certificate/lp/74f53bd1-68dd-49dd-8eeb-59263f5d60fc" },
   ],
 
   languages: [
     { lang: "Amharic", level: "Fluent" },
-    { lang: "English", level: "Fluent" },
+    { lang: "English", level: "Professional" },
     { lang: "Afan Oromo", level: "Intermediate" },
   ],
 };

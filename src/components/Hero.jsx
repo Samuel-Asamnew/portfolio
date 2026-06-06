@@ -28,6 +28,17 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [displayed, typing, roleIdx]);
 
+  const [photoSrc, setPhotoSrc] = useState('https://placehold.co/400x400?text=Your+Photo');
+
+  useEffect(() => {
+    let mounted = true;
+    const img = new Image();
+    img.onload = () => { if (mounted) setPhotoSrc('/me.jpg'); };
+    img.onerror = () => { /* keep fallback */ };
+    img.src = '/me.jpg';
+    return () => { mounted = false; };
+  }, []);
+
   return (
     <section id="about" className="section" style={{
       minHeight: '100vh',
@@ -52,6 +63,8 @@ export default function Hero() {
       }} />
 
       <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%', position: 'relative' }}>
+        {/* Profile photo: add your image to `public/me.jpg` (fallback used if missing) */}
+        <img src={photoSrc} alt={data.name} className="hero-photo" />
         {/* Badge */}
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -89,7 +102,7 @@ export default function Hero() {
           letterSpacing: '0.12em', textTransform: 'uppercase',
           marginBottom: '1rem',
         }}>
-          {data.title} · Banking Systems · APIs
+          {data.title} · Banking Systems · API's
         </div>
 
         {/* Typewriter */}
@@ -121,40 +134,9 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="cta-group" style={{
-          animation: 'fadeUp 0.8s ease both 0.4s',
-        }}>
-          <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            style={{
-              background: 'var(--accent)', color: 'var(--bg)',
-              border: 'none', borderRadius: '8px',
-              padding: '16px 34px', cursor: 'pointer',
-              fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '0.95rem',
-              letterSpacing: '0.06em',
-            }}
-            onMouseEnter={e => { e.target.style.background = '#22c5f2'; e.target.style.transform = 'translateY(-2px)'; }}
-            onMouseLeave={e => { e.target.style.background = 'var(--accent)'; e.target.style.transform = 'translateY(0)'; }}
-          >
-            Get in Touch →
-          </button>
-          <a
-            href={data.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              background: 'transparent', color: 'var(--text)',
-              border: '1px solid var(--border)', borderRadius: '8px',
-              padding: '16px 34px', textDecoration: 'none',
-              fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: '0.95rem',
-              letterSpacing: '0.06em',
-            }}
-            onMouseEnter={e => { e.target.style.borderColor = 'var(--accent)'; e.target.style.color = 'var(--accent)'; e.target.style.transform = 'translateY(-2px)'; }}
-            onMouseLeave={e => { e.target.style.borderColor = 'var(--border)'; e.target.style.color = 'var(--text)'; e.target.style.transform = 'translateY(0)'; }}
-          >
-            View LinkedIn
-          </a>
+        <div className="cta-group" style={{ animation: 'fadeUp 0.8s ease both 0.4s' }}>
+          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn--primary">Get in Touch →</button>
+          <a href={data.linkedin} target="_blank" rel="noreferrer" className="btn btn--outline">View LinkedIn</a>
         </div>
 
         {/* Stats */}
@@ -163,8 +145,8 @@ export default function Hero() {
           animation: 'fadeUp 0.8s ease both 0.5s',
         }}>
           {[
-            { num: '3+', label: 'Years Experience' },
-            { num: '6+', label: 'Banking Systems Built' },
+            { num: '2+', label: 'Years Experience' },
+            { num: '7+', label: 'Banking Systems Built' },
             { num: '3', label: 'Companies Worked' },
           ].map(s => (
             <div key={s.label}>
