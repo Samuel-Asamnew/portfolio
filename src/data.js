@@ -55,7 +55,7 @@ export const data = {
 
   projects: [
     {
-      title: "National ID Integration into Core Banking",
+      title: "National ID Integration",
       desc: "Worked as both frontend (React) and backend (Java, MySQL) developer on a project integrating national ID verification into a core banking system. Built user interfaces for customer onboarding, developed secure APIs for ID validation, and optimized database schemas to manage identity records. The solution streamlined customer registration, enhanced security, and ensured compliance with national regulations.",
       tech: ["React", "Java", "MySQL", "REST API", "Integration"],
       link: "https://fayda.gadaabank.com.et/publicfayda/",
