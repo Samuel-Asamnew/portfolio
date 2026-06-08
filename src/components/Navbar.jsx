@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 const links = ['About', 'Experience', 'Projects', 'Skills', 'Contact'];
 
@@ -30,12 +31,11 @@ export default function Navbar() {
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       height: '64px',
     }}>
-      <span style={{
-        fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.1rem',
-        color: 'var(--accent)', letterSpacing: '-0.02em',
+      <button onClick={() => scrollTo('About')} aria-label="Home" style={{
+        background: 'none', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center',
       }}>
-        SA<span style={{ color: 'var(--text)' }}>.</span>
-      </span>
+        <Logo size={36} />
+      </button>
 
       {/* Desktop */}
       <ul style={{
