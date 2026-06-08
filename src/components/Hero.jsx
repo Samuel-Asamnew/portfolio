@@ -169,7 +169,7 @@ export default function Hero() {
         display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
         animation: 'fadeIn 1s ease both 1s',
       }}>
-        <span style={{ color: 'var(--muted)', fontSize: '0.65rem', letterSpacing: '0.15em' }}>SCROLL</span>
+        <span style={{ color: 'var(--muted)', fontSize: '0.65rem', letterSpacing: '0.15em' }}></span>
         <div style={{
           width: '1px', height: '40px',
           background: 'linear-gradient(to bottom, var(--accent), transparent)',
