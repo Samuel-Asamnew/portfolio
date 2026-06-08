@@ -50,17 +50,7 @@ export const data = {
       ],
       tech: ["Java", "REST API", "ESB", "Integration"],
     },
-    {
-      role: "ERPNext Developer",
-      company: "Mevani PLC",
-      period: "Prior Experience",
-      type: "Full-time",
-      highlights: [
-        "Customised and extended ERPNext modules to meet client business requirements",
-        "Developed Python-based backend scripts and automation workflows",
-      ],
-      tech: ["Python", "ERPNext", "Frappe", "MySQL"],
-    },
+
   ],
 
   projects: [
