@@ -33,9 +33,9 @@ export default function Hero() {
   useEffect(() => {
     let mounted = true;
     const img = new Image();
-    img.onload = () => { if (mounted) setPhotoSrc('/me.jpg'); };
+    img.onload = () => { if (mounted) setPhotoSrc('/portfolio/me.jpg'); };
     img.onerror = () => { /* keep fallback */ };
-    img.src = '/me.jpg';
+    img.src = '/portfolio/me.jpg';
     return () => { mounted = false; };
   }, []);
 
@@ -63,8 +63,9 @@ export default function Hero() {
       }} />
 
       <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%', position: 'relative' }}>
-        {/* Profile photo: add your image to `public/me.jpg` (fallback used if missing) */}
+        {/* Profile photo */}
         <img src={photoSrc} alt={data.name} className="hero-photo" />
+        
         {/* Badge */}
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: '8px',

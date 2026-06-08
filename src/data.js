@@ -6,7 +6,7 @@ export const data = {
   phone: "+251 949 384 998",
   location: "Addis Ababa, Ethiopia",
   github: "https://github.com/Samuel-Asamnew", // update with your real handle
-  linkedin: "www.linkedin.com/in/samuel-asamnew-mamo-80245833b", // update with your real profile
+  linkedin: "https://www.linkedin.com/in/samuel-asamnew-mamo-80245833b", // update with your real profile
   summary: "Software Engineer and IT professional with hands-on experience in enterprise software development, banking integrations, backend systems, and full-stack application development. Proven track record in Java Spring Boot, React, REST API development, and system integration.",
 
   skills: [
