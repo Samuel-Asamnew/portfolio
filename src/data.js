@@ -12,14 +12,12 @@ export const data = {
   skills: [
     { name: "Java / Spring Boot", level: 95, category: "Backend" },
     { name: "React", level: 85, category: "Frontend" },
-    { name: "Python", level: 78, category: "Backend" },
     { name: "REST API Design", level: 92, category: "Backend" },
     { name: "Laravel", level: 70, category: "Backend" },
     { name: "ESB / Integration", level: 88, category: "Integration" },
     { name: "MySQL", level: 85, category: "Database" },
     { name: "Oracle DB", level: 80, category: "Database" },
-    { name: "Git", level: 88, category: "DevOps" },
-    { name: "ERPNext / Python", level: 75, category: "ERP" },
+    { name: "ERPNext / Python", level: 60, category: "ERP" },
   ],
 
   experience: [
