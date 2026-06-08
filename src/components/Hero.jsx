@@ -148,7 +148,7 @@ export default function Hero() {
           {[
             { num: '2+', label: 'Years Experience' },
             { num: '7+', label: 'Banking Systems Built' },
-            { num: '3', label: 'Companies Worked' },
+            { num: '2', label: 'Companies Worked' },
           ].map(s => (
             <div key={s.label}>
               <div style={{
