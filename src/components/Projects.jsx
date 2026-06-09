@@ -23,7 +23,7 @@ function ProjectCard({ project, featured }) {
   return (
     <article className={`card project-card${featured ? ' project-card--featured' : ''}`}>
       {project.link && (
-        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">View ↗</a>
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">Try demo ↗</a>
       )}
 
       {featured && (
