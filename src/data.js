@@ -74,7 +74,7 @@ export const data = {
     {
       title: "School Payment System",
       desc: "End-to-end school fee payment system integrated with Gadaa Bank's core banking platform for seamless transactions.",
-      tech: ["Java"],
+      tech: ["Java", "REST API", "ESB"],
       highlight: false,
     },
     {
