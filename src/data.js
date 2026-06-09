@@ -34,7 +34,7 @@ export const data = {
         "Led Derash payment integration and other banking system integrations",
         "Designed RESTful APIs and backend services supporting critical banking applications",
       ],
-      tech: ["Java", "Spring Boot", "React", "REST API", "ISO 20022"],
+      tech: ["Java", "Spring Boot", "React", "REST API", "Laravel"],
     },
     {
       role: "Backend Developer",
@@ -46,7 +46,7 @@ export const data = {
         "Designed and developed backend services and integration solutions",
         "Participated in enterprise system implementation and API integrations",
       ],
-      tech: ["Java", "REST API", "ESB", "Integration"],
+      tech: ["Laravel", "REST API", "Mysql", "Integration"],
     },
 
   ],
