@@ -1,7 +1,7 @@
 export const data = {
   name: "Samuel Asamnew",
   title: "Software Engineer",
-  roles: ["Backend Developer", "Full Stack Developer", "Integration Engineer"],
+  roles: ["Backend Developer", "Full Stack Developer", "Integration Officer"],
   email: "samuelasamnewmamo@gmail.com",
   phone: "+251 949 384 998",
   location: "Addis Ababa, Ethiopia",
